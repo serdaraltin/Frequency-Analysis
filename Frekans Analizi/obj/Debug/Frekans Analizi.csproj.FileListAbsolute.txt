@@ -1,0 +1,9 @@
+c:\users\meyta\documents\visual studio 2015\Projects\Frekans Analizi\Frekans Analizi\bin\Debug\Frekans Analizi.exe.config
+c:\users\meyta\documents\visual studio 2015\Projects\Frekans Analizi\Frekans Analizi\bin\Debug\Frekans Analizi.exe
+c:\users\meyta\documents\visual studio 2015\Projects\Frekans Analizi\Frekans Analizi\bin\Debug\Frekans Analizi.pdb
+c:\users\meyta\documents\visual studio 2015\Projects\Frekans Analizi\Frekans Analizi\obj\Debug\Frekans Analizi.csprojResolveAssemblyReference.cache
+c:\users\meyta\documents\visual studio 2015\Projects\Frekans Analizi\Frekans Analizi\obj\Debug\Frekans_Analizi.Form1.resources
+c:\users\meyta\documents\visual studio 2015\Projects\Frekans Analizi\Frekans Analizi\obj\Debug\Frekans_Analizi.Properties.Resources.resources
+c:\users\meyta\documents\visual studio 2015\Projects\Frekans Analizi\Frekans Analizi\obj\Debug\Frekans Analizi.csproj.GenerateResource.Cache
+c:\users\meyta\documents\visual studio 2015\Projects\Frekans Analizi\Frekans Analizi\obj\Debug\Frekans Analizi.exe
+c:\users\meyta\documents\visual studio 2015\Projects\Frekans Analizi\Frekans Analizi\obj\Debug\Frekans Analizi.pdb
