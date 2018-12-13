@@ -8,8 +8,8 @@ Basit şifreleme algoritmalarına yönelik frekans analizi saldırısı.
 - [YOUTUBE](https://www.youtube.com/channel/UCltJlvbcFATfBm0qHttpZNg?view_as=subscriber "YOUTUBE") kanalında verilen eğitime katkıda bulunması amacıyla hazırlanmıştır.
 - **VISUAL STUDIO 2015** editörü kullanılarak hazırlanan uygulama görsel bir arayüze sahiptir.
 ------------
-<br>
-#### Yazan: Şadi Evren ŞEKER
+
+### Yazan: Şadi Evren ŞEKER
 
 Şifrelenmiş bir metine saldırı yöntemlerinden birisi de frekans analizi yapmaktır. Bu yöntemde, metinde bulunan harf sıklıklarına göre bir frekans tablosu oluşuturulur. Bu tablo orjinal mesajın gönderildiği frekans sıklıkları ile karşılaştırılır ve karakteristik bazı harfler tahmin edilebilir.
 
@@ -21,14 +21,14 @@ Aşağıdaki resimde inigilizce dilindeki harflerin frekansları verilmiştir.
 
 
 ------------
-### [Meyta - Kriptoloji 6 - Kriptoanaliz / Frekans Analizi](https://www.youtube.com/watch?v=nZwcoATMVdo "Kriptoloji 2 - Sezar Şifreleme")
-![Meyta - Kriptoloji 6 - Kriptoanaliz / Frekans Analizi](https://github.com/serdaraltin/Substitution-Cipher/blob/master/Yerine%20Koyma/bin/Debug/On-Izleme.jpg)
+### [Meyta - Kriptoloji 6 - Kriptoanaliz / Frekans Analizi(Frequency Analysis)](https://www.youtube.com/watch?v=WyBOdy9glYw "Meyta - Kriptoloji 6 - Kriptoanaliz / Frekans Analizi(Frequency Analysis)")
+![Meyta - Kriptoloji 6 - Kriptoanaliz / Frekans Analizi(Frequency Analysis)](https://github.com/serdaraltin/Frequency-Analysis/blob/master/Frekans%20Analizi/bin/Debug/On-Izleme.jpg)
 
 ------------
 
 **Tasarım - Form1.Designer.cs**
 
-![Form1](https://github.com/serdaraltin/Substitution-Cipher/blob/master/Yerine%20Koyma/bin/Debug/ScreenShot.PNG)
+![Form1](https://github.com/serdaraltin/Frequency-Analysis/blob/master/Frekans%20Analizi/bin/Debug/Program.PNG)
 
 ------------
 
