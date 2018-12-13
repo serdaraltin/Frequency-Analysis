@@ -9,7 +9,7 @@ Basit şifreleme algoritmalarına yönelik frekans analizi saldırısı.
 - **VISUAL STUDIO 2015** editörü kullanılarak hazırlanan uygulama görsel bir arayüze sahiptir.
 ------------
 <br>
-#### **Yazan: Şadi Evren ŞEKER**
+####Yazan: Şadi Evren ŞEKER
 
 Şifrelenmiş bir metine saldırı yöntemlerinden birisi de frekans analizi yapmaktır. Bu yöntemde, metinde bulunan harf sıklıklarına göre bir frekans tablosu oluşuturulur. Bu tablo orjinal mesajın gönderildiği frekans sıklıkları ile karşılaştırılır ve karakteristik bazı harfler tahmin edilebilir.
 
