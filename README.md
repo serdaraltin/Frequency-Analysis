@@ -16,7 +16,7 @@ Basit şifreleme algoritmalarına yönelik frekans analizi saldırısı.
 Örneğin ingilizce’de **e** harfi diğer harflere nazaran daha sık kullanılmaktadır. Bu durumda şifrelenmiş metinde en çok geçen harf muhtemelen **e** harfidir denilebilir.
 
 Aşağıdaki resimde inigilizce dilindeki harflerin frekansları verilmiştir.
-[![Analiz](http://bilgisayarkavramlari.com/wp-content/uploads/2008/02/frekans_analiz1.jpg "Analiz")](http://bilgisayarkavramlari.com/wp-content/uploads/2008/02/frekans_analiz1.jpg "Analiz")
+[![Analiz](http://bilgisayarkavramlari.com/wp-content/uploads/2008/02/frekans_analiz1.jpg "Analiz")](https://github.com/serdaraltin/Frequency-Analysis/blob/master/Frekans%20Analizi/bin/Debug/frekans_analiz1.jpg "Analiz")
 
 
 
