@@ -5,41 +5,24 @@ Basit şifreleme algoritmalarına yönelik frekans analizi saldırısı.
 
 
 
-- **[YOUTUBE](https://www.youtube.com/channel/UCltJlvbcFATfBm0qHttpZNg?view_as=subscriber "YOUTUBE") **kanalında verilen eğitime katkıda bulunması amacıyla hazırlanmıştır.
+- [YOUTUBE](https://www.youtube.com/channel/UCltJlvbcFATfBm0qHttpZNg?view_as=subscriber "YOUTUBE") kanalında verilen eğitime katkıda bulunması amacıyla hazırlanmıştır.
 - **VISUAL STUDIO 2015** editörü kullanılarak hazırlanan uygulama görsel bir arayüze sahiptir.
-
-
 ------------
 <br>
+#### **Yazan: Şadi Evren ŞEKER**
 
-#### Vikipedi, özgür ansiklopedi
+Şifrelenmiş bir metine saldırı yöntemlerinden birisi de frekans analizi yapmaktır. Bu yöntemde, metinde bulunan harf sıklıklarına göre bir frekans tablosu oluşuturulur. Bu tablo orjinal mesajın gönderildiği frekans sıklıkları ile karşılaştırılır ve karakteristik bazı harfler tahmin edilebilir.
 
+Örneğin ingilizce’de **e** harfi diğer harflere nazaran daha sık kullanılmaktadır. Bu durumda şifrelenmiş metinde en çok geçen harf muhtemelen **e** harfidir denilebilir.
 
-ROT13 bir Sezar şifresi , bir ikame şifresi türüdür. ROT13'te, alfabe 13 adımda döndürülür.
-Tek harflerin ayrı ayrı ikame edilmesi - basit ikame - ikamesini temsil etmek için alfabeyi bir sırayla yazarak gösterilebilir. Buna bir ikame alfabesi denir . Cipher alfabesi kaydırılabilir veya tersine çevrilebilir ( sırasıyla Sezar ve Atbash şifrelerini oluşturabilir ) veya daha karmaşık bir şekilde karıştırılabilir, bu durumda buna karışık bir alfabe veya bozuk alfabesi adı verilir . Geleneksel olarak, karışık alfabeler ilk önce bir anahtar sözcük yazarak, tekrarlanan harfleri kaldırarak ve sonra sıradaki sırayla alfabedeki kalan tüm harfleri yazarak oluşturulabilir.
+Aşağıdaki resimde inigilizce dilindeki harflerin frekansları verilmiştir.
+[![Analiz](http://bilgisayarkavramlari.com/wp-content/uploads/2008/02/frekans_analiz1.jpg "Analiz")](http://bilgisayarkavramlari.com/wp-content/uploads/2008/02/frekans_analiz1.jpg "Analiz")
 
-Bu sistemi kullanarak, " **zebralar** " anahtar kelimesi bize aşağıdaki alfabeleri verir:
-
-Düz metin alfabesi:	**ABCDEFGHIJKLMNOPQRSTUVWXYZ**
-Şifreli alfabe:**	ZEBRASCDFGHIJKLMNOPQTUVWXY**
-Bir mesaj
-
-    bir kerede kaçmak. keşfettik!
-
-için şifreler
-
-    SIAA ZQ LKBA. VA ZOA RFPBLUAOAR!
-Geleneksel olarak, şifreli metin, noktalama işaretlerini ve boşlukları atlayarak, sabit uzunlukta bloklar halinde yazılır; Bu, aktarım hatalarından kaçınmaya ve sözcük metnini düz metinden gizlemeye yardımcı olmak için yapılır . Bu bloklara "gruplar" denir ve bazen bir "grup sayısı" (yani, grup sayısı) ek bir kontrol olarak verilir. İletilerin telegraf tarafından iletildiği tarihlerden kalma beş harfli gruplar gelenekseldir :
-
-    SIAAZ QLKBA VAZOA RFPBL UAOAR
-Mesajın uzunluğu beş ile bölünemezse, sonunda " **boş** " ile doldurulabilir . Bunlar açıkça saçma sapan şifreli herhangi bir karakter olabilir, böylece alıcı kolayca onları tespit edebilir ve atabilir.
-
-Şifreli metin alfabesi bazen düz metin alfabesinden farklıdır; örneğin, pigpen şifrede , şifreli metin bir kılavuzdan türetilen bir dizi sembolden oluşur.
 
 
 ------------
-### [Meyta - Kriptoloji 3 - Yerine Koyma Şifrelemesi](https://www.youtube.com/watch?v=nZwcoATMVdo "Kriptoloji 2 - Sezar Şifreleme")
-![Meyta - Kriptoloji 2 - Sezar Şifreleme](https://github.com/serdaraltin/Substitution-Cipher/blob/master/Yerine%20Koyma/bin/Debug/On-Izleme.jpg)
+### [Meyta - Kriptoloji 6 - Kriptoanaliz / Frekans Analizi](https://www.youtube.com/watch?v=nZwcoATMVdo "Kriptoloji 2 - Sezar Şifreleme")
+![Meyta - Kriptoloji 6 - Kriptoanaliz / Frekans Analizi](https://github.com/serdaraltin/Substitution-Cipher/blob/master/Yerine%20Koyma/bin/Debug/On-Izleme.jpg)
 
 ------------
 
@@ -64,7 +47,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Yerine_Koyma
+namespace Frekans_Analizi
 {
     public partial class Form1 : Form
     {
@@ -73,34 +56,31 @@ namespace Yerine_Koyma
             InitializeComponent();
         }
 
-        private void btn_anahtarolustur_Click(object sender, EventArgs e)
+        private void btn_analizet_Click(object sender, EventArgs e)
         {
-            tx_anahtar.Text = "";
-            while(tx_anahtar.TextLength < 26)
+            int[] alfabe = new int[26];
+            //0,0,0,0,0,0,0...
+            //a,b,c,d,e,f,g...
+            prgb_durum.Maximum = tx_analizmetin.TextLength;
+            for (int i = 0; i < tx_analizmetin.TextLength; i++)
             {
-                Random rastgele = new Random();
-                char harf = (char)rastgele.Next(97, 123); //harf elde etme
-
-                if (!(tx_anahtar.Text.Contains(harf)))
+                if(tx_analizmetin.Text[i] > 96 && tx_analizmetin.Text[i] < 123) // örnek : a = 97 - 97 = 0
                 {
-                    tx_anahtar.Text += harf;
+                    alfabe[tx_analizmetin.Text[i] - 97] += 1; // 
                 }
-
+                prgb_durum.Value += 1;
             }
-        }
 
-        private void btn_sifrele_Click(object sender, EventArgs e)
-        {
-            tx_sirelimesaj.Text = "";
-            for (int i = 0; i< tx_acikmesaj.TextLength; i++)
+            for(int a = 0; a < alfabe.Length; a++)
             {
-                int yerine_koyma = tx_acikmesaj.Text[i] - 97;
-                char sirelenen_harf = tx_anahtar.Text[yerine_koyma];
-                tx_sirelimesaj.Text += sirelenen_harf;
+                char harf = (char)(a + 97);
+                lstb_analizsonucu.Items.Add(harf.ToString() + " = " + alfabe[a].ToString());
             }
+
         }
     }
 }
+
 ```
 
 **Powered By DeadSound**
